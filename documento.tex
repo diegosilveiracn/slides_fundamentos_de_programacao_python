@@ -142,7 +142,7 @@ diego.nascimento@ifrn.edu.br
 
 \begin{itemize}
 	\item Um programa em Python pode ser escrito em qualquer editor de texto;
-	\item O documento com o código fonte deve ser salvo com extensão .py;
+	\item O documento com o código fonte deve ser salvo com extensão \structure{.py};
 	\item Para facilitar o desenvolvimento é comum utilizar-se um IDE
 	(Integrated Development Environment); e
 	\item O IDLE é o ambiente de desenvelvimento padrão.
@@ -177,7 +177,7 @@ print('Oi, mundo!')
 \end{block}\vfill
 
 \begin{itemize}
-	\item Comentários são iniciados com \#.
+	\item Comentários são iniciados com \structure{\#}.
 \end{itemize}\vfill
 
 \begin{exampleblock}{Exemplo}
@@ -212,7 +212,7 @@ O que for escrito no bloco de comentário será ignorado pelo interpretador.
 
 \end{frame}
 
-\begin{frame}
+\begin{frame}[fragile]
 \frametitle{Declaração de Variável}
 
 \begin{itemize}
@@ -224,17 +224,14 @@ O que for escrito no bloco de comentário será ignorado pelo interpretador.
 \end{itemize}\vfill
 
 \begin{exampleblock}{Exemplos}
-\begin{columns}[c] 
-	\column{.4\textwidth}
-	i\\
-	nome\\
-	data\_nascimento
-	
-	\column{.5\textwidth}
-	nota1\\
-	\_sexo\\
-	mediaGeral
-\end{columns}
+	\begin{lstlisting}	
+i
+nome
+data_nascimento
+nota1
+_sexo
+mediaGeral
+	\end{lstlisting}
 \end{exampleblock}
 \end{frame}
 
@@ -257,5 +254,109 @@ type(True)
 \end{lstlisting}
 \end{exampleblock}
 \end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Operador de Atribuição}
+
+\begin{block}{Definição}
+O comando de atribuição é utilizado para conceder valores ou operações a variáveis.
+\end{block}\vfill
+
+\begin{itemize}
+	\item Em python o operador de atribuição é o sinal de igual: \structure{=};
+	\item Do lado esquerdo ao operador de atribuição fica a variável à qual está
+	sendo atribuído o valor; e
+	\item A direita do operador pode-se escrever qualquer expressão (constantes,
+	variáveis ou expressões numéricas).
+\end{itemize}\vfill
+
+\begin{exampleblock}{Exemplos}
+	\begin{lstlisting}
+linguagem = 'Python'
+idade = 36
+altura = 82.5
+matriculado = True
+	\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Instrução de Entrada}
+
+\begin{block}{Definição}
+É o meio pelos quais os dados são transferidas pelo usuário ou pelos níveis secundários de memória ao computador.
+\end{block}\vfill
+
+\begin{itemize}
+	\item Python possui o comando para instrução de entrada via teclado: \structure{input()}.
+\end{itemize}\vfill
+
+\begin{exampleblock}{Exemplo}
+	\begin{lstlisting}
+nome = input('Digite seu nome:')
+print('Oi,',nome)
+	\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Operadores Aritméticos}
+
+\begin{block}{Definição}
+A aritmética é o ramo da matemática que lida com números e com as operações possíveis entre eles.
+\end{block} \vfill
+
+\begin{itemize}
+	\item \structure{+} : Adição;
+	\item \structure{-}: Subtração;
+	\item \structure{*} : Multiplicação;
+	\item \structure{/}  : Divisão;
+	\item \structure{//}  : Divisão inteira;
+	\item \structure{\%} : Resto; e
+	\item \structure{**} : Potência.
+\end{itemize}\vfill
+
+\begin{exampleblock}{Exemplo}
+	\begin{lstlisting}
+a = int(input('Digite um nú mero inteiro:'))
+b = int(input('Digite um nú mero inteiro:'))
+c = a + b
+print ('Resultado =',c)
+	\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Expressão Aritmética}
+
+\begin{block}{Definição}
+Uma expressão constitui-se em um conjunto de variáveis e/ou valores, separados por caracteres especiais, que indicam as operações que devem ser executadas.
+\end{block} \vfill
+
+ \begin{columns}[c]
+
+\column{.5\textwidth}
+\begin{alertblock}{Importante}
+Os operadores devem obedecer uma ordem de precedência:
+\begin{itemize}
+	\item Parênteses;
+	\item Potenciação;
+	\item Multiplicação, Divisão e Resto; e
+	\item Adição e subtração.
+\end{itemize}
+\end{alertblock} \vfill
+
+\column{.4\textwidth}
+\begin{exampleblock}{Exemplo}
+	\begin{lstlisting}
+a = 2
+b = 8
+c = a + b / 2
+print(c)
+	\end{lstlisting}
+\end{exampleblock}
+\end{columns}
+\end{frame}
+
 
 \end{document}
