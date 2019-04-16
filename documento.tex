@@ -520,7 +520,7 @@ O comando \structure{break} permite parar uma execução de uma instrução de r
 \begin{exampleblock}{Exemplo}
 	\begin{lstlisting}
 i = 1
-while (i <= 10):
+while i <= 10:
     print (i)
     if i == 5: 
         break
@@ -539,8 +539,66 @@ A construção \structure{for}, ou repetição com variável de controle, é uma
 \begin{exampleblock}{Exemplo}
 	\begin{lstlisting}
 for i in range(11):
-    print (i)
+    print(i)
 	\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+
+\section{Subprograma}
+
+\begin{frame}
+\frametitle{Função}
+
+\begin{block}{Definição}
+São subrotinas (módulos ou métodos) de programas, capazes de executar uma tarefa definida pelo programador, que pode retorna ou não algum valor. Os programas desenvolvidos com subprogramas são ditos modulares.
+\end{block} \vfill
+
+\begin{itemize}
+	\item Python possui uma estrutura para definição de função: \structure{def}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Função}
+
+\begin{exampleblock}{Exemplo 1}
+	\begin{lstlisting}
+def mensagem():
+    print('Oi , mundo!')
+
+mensagem()
+	\end{lstlisting}
+\end{exampleblock}\vfill
+
+\begin{exampleblock}{Exemplo 2}
+	\begin{lstlisting}
+def somar(a,b):
+    return a + b
+
+valor1 = float(input('Digite o primeiro valor :'))
+valor2 = float(input('Digite o segundo valor :'))
+resultado = somar(valor1,valor2)
+print('A soma de ',valor1 ,' + ',valor2 ,' = ',resultado)
+	\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Recursão}
+
+\begin{block}{Definição}
+É quando uma função refere-se a si própria durante a própria definição.
+\end{block} \vfill
+
+\begin{exampleblock}{Exemplo 2}
+\begin{lstlisting}
+def contador(i):
+    if i > 1:
+        contador(i - 1)
+    print (i)
+
+contador(10)
+\end{lstlisting}
 \end{exampleblock}
 \end{frame}
 
