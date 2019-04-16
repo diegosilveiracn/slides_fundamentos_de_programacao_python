@@ -149,7 +149,7 @@ diego.nascimento@ifrn.edu.br
 \end{itemize}
 \end{frame}
 
-\section{Estrutura}
+\section{Estrutura de um programa}
 
 \begin{frame}[fragile]
 \frametitle{Instrução de Saída}
@@ -308,7 +308,7 @@ A aritmética é o ramo da matemática que lida com números e com as operaçõe
 
 \begin{itemize}
 	\item \structure{+} : Adição;
-	\item \structure{-}: Subtração;
+	\item \structure{-} : Subtração;
 	\item \structure{*} : Multiplicação;
 	\item \structure{/}  : Divisão;
 	\item \structure{//}  : Divisão inteira;
@@ -358,5 +358,190 @@ print(c)
 \end{columns}
 \end{frame}
 
+\section{Estrutura de Seleção}
+
+\begin{frame}[fragile]
+\frametitle{Estrutura de Seleção}
+
+\begin{block}{Definição}
+Também citado na literatura por Estrutura Condicional, é a
+representação de um ou mais comandos de decisão que são responsáveis por mudar o fluxo das instruções de um algoritmo em tempo de execução.
+\end{block} \vfill
+
+\begin{itemize}
+	\item Python possui apenas uma estrutura de controle: \structure{if}
+\end{itemize}
+
+\begin{exampleblock}{Exemplo}
+	\begin{lstlisting}
+status = 0
+if status == 0:
+   print('Livre')
+else:
+   print('Ocupado')
+\end{lstlisting}
+\end{exampleblock}\vfill
+
+\begin{alertblock}{Importante}
+O comando \structure{else} não é obrigatório.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Operadores Relacionais}
+
+\begin{block}{Definição}
+	Os operadores relacionais estabelecem uma relação entre seus operandos.
+\end{block} \vfill
+
+\begin{itemize}
+	\item \structure{==} : igual;
+	\item \structure{!=} : diferente;
+	\item \structure{<} : menor;
+	\item \structure{<=} : menor ou igual;
+	\item \structure{>} : maior; e
+	\item \structure{>=} : maior ou igual.
+\end{itemize}\vfill
+
+\begin{exampleblock}{Exemplo}
+	\begin{lstlisting}
+numero = int(input('Digite um número:'))
+if numero >= 0:
+    print('Número positivo')
+else:
+    print('Número negativo')
+	\end{lstlisting}
+\end{exampleblock}
+
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Operadores Lógicos}
+
+\begin{block}{Definição}
+Os operadores lógicos definem as maneiras como as relações podem ser conectadas.
+\end{block} \vfill
+
+\begin{itemize}
+	\item \structure{not} : negação lógica;
+	\item \structure{and} : e lógico; e
+	\item \structure{or} : ou lógico.
+\end{itemize}\vfill
+
+\begin{exampleblock}{Exemplo}
+	\begin{lstlisting}
+nota = float(input('Digite uma nota:'))
+if (nota >= 0) and (nota < 11):
+    print('Nota válida')
+else:
+    print('Nota inválida')
+	\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}
+\frametitle{Tabela-verdade}
+
+\begin{exampleblock}{Exemplo}
+	\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline a = & b = & a \structure{and} b & a \structure{or} b & \structure{not} a\\ \hline
+True & True & True & True & False\\ \hline
+True & False & False & True & False\\ \hline
+False & True & False & True & True\\ \hline
+False & False & False & False & True\\ \hline
+\end{tabular}
+	\end{center}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Estrutura de Seleção Aninhada}
+
+\begin{block}{Definição}
+É uma estrutura para desvio de fluxo do programa formada pelo comando de decisão \structure{if} / \structure{elif} / \structure{else} mais subestruturas de decisão.
+\end{block}\vfill
+
+\begin{exampleblock}{Exemplo}
+\begin{lstlisting}
+numero = int(input('Digite um número inteiro:'))
+if numero > 0:
+    print ('Número positivo')
+elif numero < 0:
+    print ('Número negativo')
+else:
+    print ('O número digitado foi zero')
+\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+
+\section{Estruturas de Repetição}
+
+\begin{frame}
+\frametitle{Estruturas de Repetição}
+
+\begin{block}{Definição}
+Uma estrutura de repetição é uma estrutura de desvio do fluxo de controle presente em linguagens de programação que realiza e repete diferentes computações ou ações.
+\end{block}\vfill
+
+\begin{itemize}
+\item Python possui duas estruturas de repetição:
+\begin{itemize}
+	\item \structure{while}; e
+	\item \structure{for}.
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Estrutura While}
+
+\begin{block}{Definição}
+A construção while (também chamada repetição pré-testada) é a mais difundida estrutura de repetição.
+\end{block}\vfill
+
+\begin{exampleblock}{Exemplo}
+\begin{lstlisting}
+i = 1
+while i <= 10:
+    print (i)
+    i = i + 1
+\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Comando Break}
+
+\begin{block}{Definição}
+O comando \structure{break} permite parar uma execução de uma instrução de repetição toda vez que o mesmo for invocado, ignorando, caso ainda existam, outras instruções a serem executadas.
+\end{block}\vfill
+
+\begin{exampleblock}{Exemplo}
+	\begin{lstlisting}
+i = 1
+while (i <= 10):
+    print (i)
+    if i == 5: 
+        break
+    i = i + 1
+	\end{lstlisting}
+\end{exampleblock}
+\end{frame}
+
+\begin{frame}[fragile]
+\frametitle{Estrutura For}
+
+\begin{block}{Definição}
+A construção \structure{for}, ou repetição com variável de controle, é uma estrutura de repetição que designa uma variável de controle para cada iteração do bloco, e uma operação de passo a cada iteração.
+\end{block}\vfill
+
+\begin{exampleblock}{Exemplo}
+	\begin{lstlisting}
+for i in range(11):
+    print (i)
+	\end{lstlisting}
+\end{exampleblock}
+\end{frame}
 
 \end{document}
